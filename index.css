@@ -1,0 +1,366 @@
+/**  /////////////  UNIVERSAL PROPERTIES  //////////////  **/
+
+body {
+  box-sizing : border-box;
+  font-size : 12px;
+}
+
+header, main, footer {
+  margin : 2px 2px 5px 2px;
+  border : 3px solid black;
+  border-radius : 12px;
+  box-shadow : 3px 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+img {
+  width : 2.5em;
+  height : 2.5em;
+}
+
+ul {
+  list-style-type: none;
+  padding-left : 0;
+}
+
+.hidden {
+  display : none;
+}
+
+
+/**  /////////////  HEADER PROPERTIES  //////////////  **/
+
+header {
+  min-height: 3.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background : tan;
+}
+
+.header-container {
+  display : flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo, .quiz-progress-list {
+  margin : 5px;
+  text-align : center;
+}
+
+.logo {
+  background : white;
+  padding : 5px;
+  border-radius : 20px;
+  border : 2px solid brown;
+}
+
+.title {
+  font-size : 1.7em;
+}
+
+/**  /////////////  SECTION PROPERTIES  //////////////  **/
+
+main {
+  position : relative;
+  background-image: url("http://moziru.com/images/splatter-clipart-painting-tool-7.jpg");
+  background-repeat: no-repeat;
+  background-position-x: -200px;
+  background-position-y: -200px;
+  height : 500px;
+}
+
+section {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  width : 80%;
+  max-width : 720px;
+  padding : 0px 10px 10px 10px;
+  border : 1px solid black;
+  border-radius : 12px;
+  box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.3);
+  background-color : lightblue;
+}
+
+form {
+  margin-top : -10px;
+}
+
+fieldset {
+  border : none;
+}
+
+.choice {
+  display: flex;
+  flex : 1 1 auto;
+  padding : 8px 2px;
+  margin: 10px 0px;
+  cursor : pointer;
+  background : tan;
+  border : 3px solid black;
+  border-color : brown;
+  border-radius: 12px;
+  font-family: 'Oswald', sans-serif;
+  font-size : 1em;
+}
+
+.choice:hover {
+  border : 3px solid darkblue;
+  background-color: lightgreen;
+  transition: 0.5s ease-out;
+}
+
+.choice:active {
+  background-color: #00FF00;
+}
+
+.choice:selected {
+  background-color: white;
+}
+
+.choice input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius : 50%;
+  width : 9px;
+  height : 9px;
+  background : white;
+  border : 1px solid brown;
+  margin-right : 6px;
+  position : relative;
+  top : 1px;
+}
+
+.choice input:checked {
+  background : black;
+  outline : none;
+  border: 2px solid white;
+}
+
+.icon-quiz-right, .icon-quiz-left {
+  position : absolute;
+  background : white;
+  padding : 8px;
+  border : 1px solid black;
+  border-radius : 1em;
+}
+
+.icon-quiz-right {
+  right : -2em;
+  bottom : -2em;
+}
+
+.icon-quiz-left {
+  left : -2em;
+  bottom : -2em;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+.button-container {
+  text-align : center;
+}
+
+button {
+  width : 175px;
+  padding : 10px;
+  background : white;
+  border-image: linear-gradient(grey, black) 5;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background : #00FF00;
+  transition: 0.5s ease-in;
+}
+
+.feedback-section h2 {
+  text-align: center;
+  font-size : 1.5em;
+}
+
+.correct-answer {
+  font-weight: bold;
+}
+
+/**  /////////////  FOOTER PROPERTIES  //////////////  **/
+
+footer {
+  background : tan;
+  font-size : 10px;
+}
+
+.creator-name, .reference-info {
+  margin : 10px;
+}
+
+
+/** /////////////  MEDIA QUERIES  //////////////  **/
+
+@media only screen and (max-width: 355px) {
+  
+  body {
+    font-size: 10px;
+  }
+  
+  img {
+    width : 2em;
+    height : 2em;
+  }
+  
+  section {
+  width : 80%;
+  padding : 0px 10px 10px 10px;
+  }
+  
+  .icon-quiz-left {
+    display : none;
+  }
+
+  .icon-quiz-right {
+    display : none;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  
+  body {
+    font-size : 16px;
+  }
+  
+  header, main, footer {
+  margin : 10px;
+  box-shadow : 5px 5px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  header {
+    min-height: 3.5em;
+  }
+ 
+  img {
+   height : 2.5em;
+   width : 2.5em;
+  }
+  
+  section {
+    width : 75%;
+    padding : 0px 20px 20px 20px;
+  }
+  
+  .choice input {
+    top : 2px;
+    margin : 5px 12px;
+  }
+  
+  .icon-quiz-right, .icon-quiz-left {
+    padding : 12px;
+  }
+ 
+  .icon-quiz-right {
+    right : -2em;
+    bottom : -2em;
+  }
+
+  .icon-quiz-left {
+    left : -2em;
+    bottom : -2em;
+  }
+ 
+  footer {
+    display : flex;
+    justify-content: space-between;
+  }
+  
+  .reference-info {
+    display : inline-block;
+    font-size : 1.2em;
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  
+  body {
+    font-size : 18px;
+  }
+  
+  .title {
+    font-size: 2em;
+  }
+  
+  .logo, .quiz-progress-list {
+  margin : 20px;
+}
+
+  main {
+    min-height : 600px;
+  }
+  
+  section {
+    width : 80%;
+  }
+  
+  .choice {
+    margin : 10px 10px;
+    padding : 10px 10px;
+  }
+  
+  .choice input {
+    height : 11px; 
+    width : 11px;
+  }
+  
+  button {
+    padding : 10px;
+    width : 300px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  
+  body {
+    font-size : 22px;
+  }
+  
+  .choice input {
+    top : 5px;
+    margin-right : 20px;
+    width: 14px;
+    height: 14px;
+  }
+  
+  .choice input:checked {
+  border: 2.5px solid white;
+  } 
+  
+  main {
+    min-height : 650px;
+    background-position-x: 0px;
+    background-position-y: -100px;
+    background-size : cover;
+  }
+}
+
+@media only screen and (min-height: 960px) and (min-width: 960px) {
+  
+  body {
+    font-size : 26px;
+  }
+  
+  .choice input {
+  width : 1.2em;
+  height : 1.2em;
+  }
+  
+  main {
+    min-height : 850px;
+    background-position-x: 0px;
+    background-position-y: -100px;
+    background-size : cover;
+  }
+}
