@@ -1,4 +1,9 @@
 # TheEclecticQuiz
+
+Please see the updated, resubmitted version made March 5th/6th.  This submission was made by my own decision, but the Thinkful course also wanted me to make a submission filling certain criteria.  Therefore, the resubmitted version is more up-to-date and worth checking instead.
+
+
+
 This quiz has some of the HTML, CSS, Javascript, and JQuery concpets I've learnt thus far in my Thinkful Raleigh code camp. 
 
 _________________________________________
